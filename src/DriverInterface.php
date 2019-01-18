@@ -14,6 +14,13 @@ use Psr\Cache\CacheItemPoolInterface;
 interface DriverInterface
 {
     /**
+     * DriverInterface constructor.
+     * @param string $name
+     * @param array $options
+     */
+    public function __construct(string $name, array $options);
+
+    /**
      * @return string
      */
     public function name(): string;
